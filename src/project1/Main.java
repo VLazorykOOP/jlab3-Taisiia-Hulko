@@ -12,7 +12,7 @@ class PrintedEdition {
     }
 
     public void show() {
-        System.out.println("Title: " + title + ", Author: " + author);
+        System.out.println("Назва: " + title + ", Автор: " + author);
     }
 }
 
@@ -27,7 +27,7 @@ class Book extends PrintedEdition {
     @Override
     public void show() {
         super.show();
-        System.out.println("Publisher: " + publisher);
+        System.out.println("Видавництво: " + publisher);
     }
 }
 
@@ -42,7 +42,7 @@ class Journal extends PrintedEdition {
     @Override
     public void show() {
         super.show();
-        System.out.println("Issue Number: " + issueNumber);
+        System.out.println("Номер випуску: " + issueNumber);
     }
 }
 
@@ -57,7 +57,7 @@ class Textbook extends Book {
     @Override
     public void show() {
         super.show();
-        System.out.println("Subject: " + subject);
+        System.out.println("Предмет: " + subject);
     }
 }
 
@@ -66,9 +66,9 @@ public class Main {
         Scanner scanner = new Scanner(System.in);
         PrintedEdition[] editions = new PrintedEdition[3];
 
-        editions[0] = new Book("Java Programming", "John Doe", "Tech Books");
-        editions[1] = new Journal("Science Journal", "Jane Smith", 5);
-        editions[2] = new Textbook("Calculus", "Albert Einstein", "Math Publishers", "Mathematics");
+        editions[0] = new Book("Програмування на Java", "Іван Іванов", "Технічні Книги");
+        editions[1] = new Journal("Науковий Журнал", "Олена Петренко", 5);
+        editions[2] = new Textbook("Математичний Аналіз", "Альберт Ейнштейн", "Математичне Видавництво", "Математика");
 
         for (PrintedEdition edition : editions) {
             edition.show();

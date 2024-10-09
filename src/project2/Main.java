@@ -72,7 +72,7 @@ class Rational extends Pair {
 
     public Rational(int numerator, int denominator) {
         if (denominator == 0) {
-            throw new IllegalArgumentException("Denominator cannot be zero.");
+            throw new IllegalArgumentException("Знаменник не може бути нулем.");
         }
         this.numerator = numerator;
         this.denominator = denominator;
@@ -135,13 +135,13 @@ public class Main {
         pairs[3] = new Rational(2, 3);
 
         for (Pair pair : pairs) {
-            System.out.println("Value: " + pair);
+            System.out.println("Значення: " + pair);
         }
 
         Pair complexSum = pairs[0].add(pairs[1]);
         Pair rationalSum = pairs[2].add(pairs[3]);
         
-        System.out.println("Sum of Complex Numbers: " + complexSum);
-        System.out.println("Sum of Rational Numbers: " + rationalSum);
+        System.out.println("Сума комплексних чисел: " + complexSum);
+        System.out.println("Сума раціональних чисел: " + rationalSum);
     }
 }
